@@ -1,16 +1,17 @@
-package Lesson_1.Marafon.cross;
+package Lesson_1.Marafon.Cross;
 
-import Lesson_1.Marafon.competitors.Competitor;
+public class Cross extends Lesson_1.Marafon.Cross.Obstacle
+{
+    private int dist;
 
-public class Cross extends Obstacle {
-    int length;
-
-    public Cross(int length) {
-        this.length = length;
+    public Cross(int dist)
+    {
+        this.dist = dist;
     }
 
     @Override
-    public void doIt(Competitor competitor) {
-        competitor.run(length);
+    public void doIt(Lesson_1.Marafon.competitors.Competitor competitor)
+    {
+        competitor.run(dist);
     }
 }

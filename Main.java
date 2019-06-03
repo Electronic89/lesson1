@@ -1,25 +1,29 @@
 package Lesson_1.Marafon;
 
-import Lesson_1.Marafon.competitors.Cat;
-import Lesson_1.Marafon.competitors.Competitor;
-import Lesson_1.Marafon.competitors.Dog;
-import Lesson_1.Marafon.competitors.Human;
-import Lesson_1.Marafon.cross.Cross;
-import Lesson_1.Marafon.cross.Obstacle;
-import Lesson_1.Marafon.cross.Wall;
+import Lesson_1.Marafon.Competitors.Cat;
+import Lesson_1.Marafon.Competitors.Dog;
+import Lesson_1.Marafon.Competitors.Human;
+import Lesson_1.Marafon.Cross.Cross;
+import Lesson_1.Marafon.Cross.Wall;
+import Lesson_1.Marafon.lesson1.git.cross.Course;
 
 public class Main {
     public static void main(String[] args) {
-        Competitor[] competitors = {new Human("Боб"), new Cat("Барсик"), new Dog("Бобик")};
-        Obstacle[] course = {new Cross(80), new Wall(2), new Wall(1), new Cross(120)};
-        for (Competitor c : competitors) {
-            for (Obstacle o : course) {
-                o.doIt(c);
-                if (!c.isOnDistance()) break;
-            }
-        }
-        for (Competitor c : competitors) {
-            c.info();
-        }
+        Course course1 = new Course(new Cross(300), new Wall(2), new Lesson_1.Marafon.Cross.Water(5));
+
+        Lesson_1.Marafon.Competitors.Team team1 = new Lesson_1.Marafon.Competitors.Team("Команда А", new Human("Гена"),
+                new Dog("Тузик"), new Dog("Ритузик"));
+
+        Lesson_1.Marafon.Competitors.Team team2 = new Lesson_1.Marafon.Competitors.Team("Команда Б", new Human("Валера"), new Cat("Васька"),
+                 new Dog("Уран"));
+
+
+        course1.doIt(team1);
+        course1.doIt(team2);
+
+        System.out.println();
+        team1.showResults();
+        System.out.println();
+        team2.showResults();
     }
-}
+    }
