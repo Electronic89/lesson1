@@ -1,3 +1,7 @@
+/*
+Харионовский Евгений 
+*/
+
 package Lesson_1.Marafon;
 
 import Lesson_1.Marafon.Competitors.Cat;
