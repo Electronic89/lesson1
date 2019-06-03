@@ -10,13 +10,15 @@ public class Team {
         this.competitors = competitors;
     }
 
-    public Lesson_1.Marafon.competitors.Competitor[] getCompetitors() {
+    public Lesson_1.Marafon.competitors.Competitor[] getCompetitors()
+    {
         return competitors;
     }
 
     public void showResults() {
-        System.out.printf("%s info:\n", teamName);
-        for (Lesson_1.Marafon.competitors.Competitor competitor : competitors) {
+        System.out.println( teamName);
+        for (Lesson_1.Marafon.competitors.Competitor competitor : competitors)
+        {
             competitor.info();
         }
     }

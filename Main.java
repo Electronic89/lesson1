@@ -9,7 +9,7 @@ import Lesson_1.Marafon.lesson1.git.cross.Course;
 
 public class Main {
     public static void main(String[] args) {
-        Course course1 = new Course(new Cross(300), new Wall(2), new Lesson_1.Marafon.Cross.Water(5));
+        Course c = new Course(new Cross(500), new Wall(2), new Lesson_1.Marafon.Cross.Water(5));
 
         Lesson_1.Marafon.Competitors.Team team1 = new Lesson_1.Marafon.Competitors.Team("Команда А", new Human("Гена"),
                 new Dog("Тузик"), new Dog("Ритузик"));
@@ -18,8 +18,9 @@ public class Main {
                  new Dog("Уран"));
 
 
-        course1.doIt(team1);
-        course1.doIt(team2);
+        c.doIt(team1);
+        System.out.println();
+        c.doIt(team2);
 
         System.out.println();
         team1.showResults();

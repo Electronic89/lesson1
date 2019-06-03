@@ -54,6 +54,6 @@ public class Human implements Lesson_1.Marafon.competitors.Competitor {
 
     @Override
     public void info() {
-        System.out.println("Human " + name + ": " + active);
+        System.out.println("Человек " + name + ": " + active);
     }
 }
